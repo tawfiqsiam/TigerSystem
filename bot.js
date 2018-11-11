@@ -199,10 +199,10 @@ let memberavatar = member.user.avatarURL
 let embed = new Discord.RichEmbed()
     .setColor('RANDOM')
     .setThumbnail(memberavatar)
-    .addField('🎽 | الاسم :  ',`${member}`)
-    .addField('📢 | لقد غادر:' , `لقد خرج منا عضو هو , ${member}:cry: `)
-    .addField('🆔 | الايدي :', "**[" + `${member.id}` + "]**" )
-            .addField('➡| تبقا',`${member.guild.memberCount}`)
+    .addField('🎽 | Name :  ',`${member}`)
+    .addField('📢 | Left:' , `Member left our server , ${member}:cry: `)
+    .addField('🆔 | ID :', "**[" + `${member.id}` + "]**" )
+            .addField('➡| members count now',`${member.guild.memberCount}`)
            
               .addField("الاسم:",`<@` + `${member.id}` + `>`, true)
                 
@@ -389,7 +389,7 @@ var prefix = "..";
 });
 
 client.on('message', message => {
-    if (message.content.startsWith("..ترحيب")) {
+    if (message.content.startsWith("..welcome")) {
                                     var mentionned = message.mentions.users.first();
                 var mentionavatar;
                   if(mentionned){
@@ -407,8 +407,8 @@ client.on('message', message => {
      var EsTeKnAN = new Discord.RichEmbed()
      .setColor('RANDOM')
      .setThumbnail(`${mentionavatar.avatarURL}`)
-     .addField(":tiger: ***منور يعسل سرفر النمور***:tiger: " ,mentionavatar.username )
-     .setDescription('***WELCOME TO TIGER GANG SERVER***')
+     .addField(":tiger: ***Welcome to our server***:tiger: " ,mentionavatar.username )
+     .setDescription('***WELCOME TO Star central***')
      .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
       message.channel.sendEmbed(EsTeKnAN);
      }
